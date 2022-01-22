@@ -18,6 +18,7 @@ a:hover {
 body {
   font-size: 16px;
   background-color: #364651;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -86,5 +87,68 @@ body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   padding-bottom: 1.15rem;
+}
+
+.moods-palette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.moods-palette__heading {
+  color: #FFFFFF;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.moods-palette__mood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.moods-palette__mood__color {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 2rem;
+  margin-right: 1.8rem;
+}
+
+.moods-palette__mood__color--perfect {
+  background-color: #7AE9AD;
+}
+
+.moods-palette__mood__color--good {
+  background-color: #7AE2E9;
+}
+
+.moods-palette__mood__color--so-so {
+  background-color: #E9C37A;
+}
+
+.moods-palette__mood__color--awful {
+  background-color: #E97A7A;
+}
+
+.moods-palette__mood__text {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

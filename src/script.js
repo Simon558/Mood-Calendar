@@ -29,33 +29,34 @@ const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 //Display days
 const days = document.getElementById('days');
 
+//FIXME: Not working
 //Moves days to right place
 for (let i = 1; i <= currentDay; i++) {
     let p = document.createElement('p');
+    p.innerHTML = ' ';
     days.appendChild(p);
 }
 
 for (let i = 1; i <= daysInMonth; i++) {
     let p = document.createElement('p');
     p.classList.add('day-number');
-
     p.innerHTML = i;
-
     days.appendChild(p);
 }
-
-//Stores data about selected color
 
 // Get all colors
 let allColors = document.querySelectorAll('.moods-palette__mood__color');
 const colorsNames = ['colorPerfect', 'colorGood', 'colorSoSo', 'colorAwful'];
 
-let selectedColor = 0;
 const allDays = document.querySelectorAll('.day-number');
 
 allColors.forEach((element, index) =>
     element.addEventListener('click', function () {
-        element.classList.remove('selected-color');
+        //Delete selected-color from not clicked elements
+        let otherColors = document.querySelector('.selected-color');
+        otherColors ? otherColors.classList.remove('selected-color') : '';
+
+        //Add selected-color for clicked element
         element.classList.add('selected-color');
 
         allDays.forEach((element) =>

@@ -27,4 +27,8 @@ body {
     align-items: center;
     justify-items: center;
     height: 100vh;
+
+    @include breakpointMax(md){
+        grid-template-columns: 1fr;
+    }
 }

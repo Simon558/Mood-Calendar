@@ -33,6 +33,13 @@ body {
   height: 100vh;
 }
 
+@media (max-width: 62rem) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .calendar {
   border-radius: 1rem;
   width: 68%;
@@ -40,6 +47,25 @@ body {
   background-color: #2C2C34;
   -webkit-box-shadow: -1px 3px 15px 0px rgba(31, 31, 31, 0.6);
           box-shadow: -1px 3px 15px 0px rgba(31, 31, 31, 0.6);
+}
+
+@media (max-width: 84.375rem) {
+  .calendar {
+    width: 80%;
+  }
+}
+
+@media (max-width: 62rem) {
+  .calendar {
+    margin: 4rem 0 6rem 0;
+  }
+}
+
+@media (max-width: 36rem) {
+  .calendar {
+    width: 90%;
+    height: 380px;
+  }
 }
 
 .month {
@@ -65,12 +91,26 @@ body {
 
 .days-week div {
   color: #FFFFFF;
-  font-size: 1.45rem;
+  font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  padding: 1.5rem 1.875rem;
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 84.375rem) {
+  .days-week div {
+    font-size: 1.3rem;
+    padding: 1.2rem 0;
+  }
+}
+
+@media (max-width: 36rem) {
+  .days-week div {
+    font-size: 0.8rem;
+    padding: 1.5rem 0 0.5rem 0;
+  }
 }
 
 .days {
@@ -78,6 +118,42 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
+}
+
+.day-number {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding-bottom: 1.15rem;
+}
+
+@media (max-width: 36rem) {
+  .day-number {
+    font-size: 1rem;
+  }
+}
+
+.day-number:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.day-number--perfect {
+  color: #7AE9AD;
+}
+
+.day-number--good {
+  color: #7AE2E9;
+}
+
+.day-number--so-so {
+  color: #E9C37A;
+}
+
+.day-number--awful {
+  color: #E97A7A;
 }
 
 .moods-palette {
@@ -97,6 +173,12 @@ body {
   letter-spacing: 0.03em;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 62rem) {
+  .moods-palette__heading {
+    font-size: 1.6rem;
+  }
 }
 
 .moods-palette__mood {
@@ -163,39 +245,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+@media (max-width: 62rem) {
+  .moods-palette__mood__text {
+    font-size: 1.3rem;
+  }
+}
+
 .selected-color {
   border: 4px solid #ffffff;
   height: 52px;
   width: 52px;
-}
-
-.day-number {
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  padding-bottom: 1.15rem;
-}
-
-.day-number:hover {
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.day-number--perfect {
-  color: #7AE9AD;
-}
-
-.day-number--good {
-  color: #7AE2E9;
-}
-
-.day-number--so-so {
-  color: #E9C37A;
-}
-
-.day-number--awful {
-  color: #E97A7A;
 }
 /*# sourceMappingURL=style.css.map */

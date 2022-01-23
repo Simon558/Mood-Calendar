@@ -9,6 +9,11 @@
         letter-spacing: 0.03em;
         font-family: 'Roboto', sans-serif;
         margin-bottom: 2rem;
+
+        @include breakpointMax(md){
+            font-size: 1.6rem;
+        }
+
     }
 
     &__mood{
@@ -73,6 +78,10 @@
             color: $primary;
             font-size: 1.5rem;
             font-family: 'Roboto', sans-serif;
+
+            @include breakpointMax(md){
+                font-size: 1.3rem;
+            }
         }
     }
 }
@@ -81,34 +90,4 @@
     border: 4px solid #ffffff;
     height: 52px;
     width: 52px;
-}
-
-.day-number{
-    color: $primary;
-    font-size: 1.4rem;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding-bottom: 1.15rem;
-
-    &:hover{
-        font-weight: 600;
-        cursor: pointer;
-    }
-
-    &--perfect{
-        color: $perfect;
-    }
-
-    &--good{
-        color: $good;
-    }
-
-    &--so-so{
-        color: $so-so;
-    }
-
-    &--awful{
-        color: $awful;
-    }
 }

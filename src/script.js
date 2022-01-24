@@ -17,7 +17,6 @@ const months = [
 let currentDate = new Date();
 let currentYear = currentDate.getFullYear();
 let currentMonth = currentDate.getMonth();
-let currentDay = currentDate.getDay();
 
 //Display current month name
 const monthDisplay = document.getElementById('month');
@@ -29,13 +28,35 @@ const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 //Display days
 const days = document.getElementById('days');
 
-//FIXME: Not working
-//Moves days to right place
-for (let i = 1; i <= currentDay; i++) {
-    let p = document.createElement('p');
-    p.innerHTML = ' ';
-    days.appendChild(p);
+function moveDays() {
+    //Get first day of moth
+    const monthToString = String(currentMonth + 1);
+
+    const firstDayOfMonth = new Date(
+        currentYear + '-' + monthToString + '-1'
+    ).getDay();
+
+    function createEmptyCell() {
+        let p = document.createElement('p');
+        p.innerHTML = ' ';
+        days.appendChild(p);
+    }
+
+    let i = 1;
+
+    //Sunday is 0
+    if (firstDayOfMonth === 0) {
+        for (i; i < 7; i++) {
+            createEmptyCell();
+        }
+    } else {
+        for (i; i < firstDayOfMonth; i++) {
+            createEmptyCell();
+        }
+    }
 }
+
+moveDays();
 
 for (let i = 1; i <= daysInMonth; i++) {
     let p = document.createElement('p');

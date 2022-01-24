@@ -83,24 +83,32 @@ allColors.forEach((element, index) =>
         allDays.forEach((element) =>
             element.addEventListener('click', function () {
                 if (index === 0) {
-                    element.classList.remove('day-number--good');
-                    element.classList.remove('day-number--so-so');
-                    element.classList.remove('day-number--awful');
+                    element.classList.remove(
+                        'day-number--good',
+                        'day-number--so-so',
+                        'day-number--awful'
+                    );
                     element.classList.add('day-number--perfect');
                 } else if (index === 1) {
-                    element.classList.remove('day-number--perfect');
-                    element.classList.remove('day-number--so-so');
-                    element.classList.remove('day-number--awful');
+                    element.classList.remove(
+                        'day-number--perfect',
+                        'day-number--so-so',
+                        'day-number--awful'
+                    );
                     element.classList.add('day-number--good');
                 } else if (index === 2) {
-                    element.classList.remove('day-number--perfect');
-                    element.classList.remove('day-number--good');
-                    element.classList.remove('day-number--awful');
+                    element.classList.remove(
+                        'day-number--perfect',
+                        'day-number--good',
+                        'day-number--awful'
+                    );
                     element.classList.add('day-number--so-so');
                 } else {
-                    element.classList.remove('day-number--perfect');
-                    element.classList.remove('day-number--good');
-                    element.classList.remove('day-number--so-so');
+                    element.classList.remove(
+                        'day-number--perfect',
+                        'day-number--good',
+                        'day-number--so-so'
+                    );
                     element.classList.add('day-number--awful');
                 }
             })

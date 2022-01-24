@@ -1,0 +1,93 @@
+.moods-palette{
+    display: flex;
+    flex-direction: column;
+
+    &__heading{
+        color: $primary;
+        font-size: 1.9rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 2rem;
+
+        @include breakpointMax(md){
+            font-size: 1.6rem;
+        }
+
+    }
+
+    &__mood{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 2rem;
+        margin-bottom: 1.2rem;
+
+        &--perfect:hover{
+            .moods-palette__mood__color{
+                background-color: $perfectHover;
+            }
+        }
+
+        &--good:hover{
+            .moods-palette__mood__color{
+                background-color: $goodHover;
+            }
+        }
+
+        &--so-so:hover{
+            .moods-palette__mood__color{
+                background-color: $so-soHover;
+            }
+        }
+        
+        &--awful:hover{
+            .moods-palette__mood__color{
+                background-color: $awfulHover;
+            }
+        }
+        
+        &__color{
+            height: 3.75rem;
+            width: 3.75rem;
+            border-radius: 2rem;
+            margin-right: 1.8rem;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &--perfect{
+                background-color: $perfect;
+            }
+
+            &--good{
+                background-color: $good;
+            }
+
+            &--so-so{
+                background-color: $so-so;
+            }
+
+            &--awful{
+                background-color: $awful;
+            }
+        }
+
+        &__text{
+            color: $primary;
+            font-size: 1.5rem;
+            font-family: 'Roboto', sans-serif;
+
+            @include breakpointMax(md){
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.selected-color{
+    border: 4px solid #ffffff;
+    height: 52px;
+    width: 52px;
+}

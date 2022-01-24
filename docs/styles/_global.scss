@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    text-decoration: none;
+    list-style: none;
+}
+
+a,
+a:visited,
+a:link,
+a:hover {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: 16px;
+    background-color: $bg;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: grid; 
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+
+    @include breakpointMax(md){
+        grid-template-columns: 1fr;
+    }
+}

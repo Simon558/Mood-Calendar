@@ -1,0 +1,98 @@
+.calendar{
+    border-radius: 1rem;
+    width: 68%;
+    height: 460px;
+    background-color: $calendarPrimary;
+    box-shadow: -1px 3px 15px 0px rgba(31, 31, 31, 0.6);
+
+    @include breakpointMax(lg){
+        width: 80%;
+    }
+
+    @include breakpointMax(md){
+        margin: 4rem 0 6rem 0;
+    }
+
+    @include breakpointMax(sm){
+        width: 90%;
+        height: 380px;
+    }
+}
+
+.month{
+    color: $primary;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    background-color: $calendarSecond;
+    padding: 1.5rem 0;
+}
+
+.days-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 1rem;
+
+    & div{
+        color: $primary;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        padding: 1.5rem 0;
+
+        @include breakpointMax(lg){
+            font-size: 1.3rem;
+            padding: 1.2rem 0;
+        }
+
+        @include breakpointMax(sm){
+            font-size: 0.8rem;
+            padding: 1.5rem 0 0.5rem 0;
+        }
+    }
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-number{
+    color: $primary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-bottom: 1.15rem;
+
+    @include breakpointMax(sm){
+        font-size: 1rem;
+    }
+
+    &:hover{
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    &--perfect{
+        color: $perfect;
+    }
+
+    &--good{
+        color: $good;
+    }
+
+    &--so-so{
+        color: $so-so;
+    }
+
+    &--awful{
+        color: $awful;
+    }
+}

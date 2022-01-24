@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+
+a,
+a:visited,
+a:link,
+a:hover {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  background-color: #364651;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  height: 100vh;
+}
+
+@media (max-width: 62rem) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.calendar {
+  border-radius: 1rem;
+  width: 68%;
+  height: 460px;
+  background-color: #2C2C34;
+  -webkit-box-shadow: -1px 3px 15px 0px rgba(31, 31, 31, 0.6);
+          box-shadow: -1px 3px 15px 0px rgba(31, 31, 31, 0.6);
+}
+
+@media (max-width: 84.375rem) {
+  .calendar {
+    width: 80%;
+  }
+}
+
+@media (max-width: 62rem) {
+  .calendar {
+    margin: 4rem 0 6rem 0;
+  }
+}
+
+@media (max-width: 36rem) {
+  .calendar {
+    width: 90%;
+    height: 380px;
+  }
+}
+
+.month {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  background-color: #D75F55;
+  padding: 1.5rem 0;
+}
+
+.days-week {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 1rem;
+}
+
+.days-week div {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 84.375rem) {
+  .days-week div {
+    font-size: 1.3rem;
+    padding: 1.2rem 0;
+  }
+}
+
+@media (max-width: 36rem) {
+  .days-week div {
+    font-size: 0.8rem;
+    padding: 1.5rem 0 0.5rem 0;
+  }
+}
+
+.days {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+.day-number {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding-bottom: 1.15rem;
+}
+
+@media (max-width: 36rem) {
+  .day-number {
+    font-size: 1rem;
+  }
+}
+
+.day-number:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.day-number--perfect {
+  color: #7AE9AD;
+}
+
+.day-number--good {
+  color: #7AE2E9;
+}
+
+.day-number--so-so {
+  color: #E9C37A;
+}
+
+.day-number--awful {
+  color: #E97A7A;
+}
+
+.moods-palette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.moods-palette__heading {
+  color: #FFFFFF;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 62rem) {
+  .moods-palette__heading {
+    font-size: 1.6rem;
+  }
+}
+
+.moods-palette__mood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.moods-palette__mood--perfect:hover .moods-palette__mood__color {
+  background-color: #49D88B;
+}
+
+.moods-palette__mood--good:hover .moods-palette__mood__color {
+  background-color: #2CC9D3;
+}
+
+.moods-palette__mood--so-so:hover .moods-palette__mood__color {
+  background-color: #DEA942;
+}
+
+.moods-palette__mood--awful:hover .moods-palette__mood__color {
+  background-color: #DB5151;
+}
+
+.moods-palette__mood__color {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 2rem;
+  margin-right: 1.8rem;
+}
+
+.moods-palette__mood__color:hover {
+  cursor: pointer;
+}
+
+.moods-palette__mood__color--perfect {
+  background-color: #7AE9AD;
+}
+
+.moods-palette__mood__color--good {
+  background-color: #7AE2E9;
+}
+
+.moods-palette__mood__color--so-so {
+  background-color: #E9C37A;
+}
+
+.moods-palette__mood__color--awful {
+  background-color: #E97A7A;
+}
+
+.moods-palette__mood__text {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 62rem) {
+  .moods-palette__mood__text {
+    font-size: 1.3rem;
+  }
+}
+
+.selected-color {
+  border: 4px solid #ffffff;
+  height: 52px;
+  width: 52px;
+}
+/*# sourceMappingURL=style.css.map */
